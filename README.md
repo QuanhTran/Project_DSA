@@ -12,25 +12,25 @@ Bước 1: Sắp xếp các công việc theo lợi nhuận giảm dần.
         Mục tiêu là tối ưu hóa lợi nhuận bằng cách ưu tiên các công việc có lợi nhuận cao trước.
 
 Bước 2: Duyệt qua từng công việc trong danh sách đã sắp xếp.
-    for i = 1 to n do
+    `for i = 1 to n do
 
 Bước 3: Xác định vị trí slot tối đa có thể thực hiện công việc.
-        Đặt k = min(dmax, DEADLINE(i))  // DEADLINE(i) là deadline của công việc thứ i
+        `Đặt k = min(dmax, DEADLINE(i))  // DEADLINE(i) là deadline của công việc thứ i
 
 Bước 4: Kiểm tra các slot từ k về 1 để tìm slot trống.
-        while k >= 1 do
+        `while k >= 1 do
 
 Bước 5: Nếu slot trống, gán công việc vào slot và dừng vòng lặp.
-            if timeslot[k] là EMPTY then
-                timeslot[k] = job(i)  // Gán công việc thứ i vào timeslot k
-                break
-            endif
+            `if timeslot[k] là EMPTY then
+                `timeslot[k] = job(i)  // Gán công việc thứ i vào timeslot k
+                `break
+            `endif
 
 Bước 6: Nếu không tìm thấy slot trống, giảm k xuống 1 để kiểm tra slot trước đó.
-            Đặt k = k - 1  // Giảm k xuống 1 để kiểm tra slot trước đó
-        endwhile
+            `Đặt k = k - 1  // Giảm k xuống 1 để kiểm tra slot trước đó
+        `endwhile
 
-    endfor
+    `endfor
 
 Sau khi hoàn thành: timeslot chứa danh sách các công việc được chọn, tối ưu lợi nhuận.
 
